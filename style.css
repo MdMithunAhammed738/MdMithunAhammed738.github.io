@@ -1,65 +1,43 @@
-/* ---------- সাধারণ সেটিং ---------- */
 body {
-    background: linear-gradient(135deg, #e3f2fd, #ffffff);
+    background: linear-gradient(to bottom right, #e3f2fd, #ffffff);
     font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
-    transition: background 0.5s ease;
 }
 
-/* ---------- মূল কনটেইনার ---------- */
 .container {
     text-align: center;
     padding: 40px;
-    max-width: 750px;
-    margin: 60px auto;
-    background: #ffffffcc;
+    max-width: 700px;
+    margin: 20px auto;
+    background: #fff;
     border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    backdrop-filter: blur(8px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-/* ---------- প্রোফাইল ইমেজ ---------- */
 .profile-img {
-    width: 160px;
-    height: 160px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid #4a90e2;
-    transition: transform 0.4s ease, border-color 0.4s ease;
 }
 
-.profile-img:hover {
-    transform: scale(1.05);
-    border-color: #1f65b5;
-}
-
-/* ---------- হেডিংস ---------- */
 h1 {
     color: #222;
-    font-size: 32px;
+    font-size: 28px;
     margin-top: 15px;
 }
 
 h2 {
     color: #4a90e2;
     font-size: 18px;
-    margin-bottom: 20px;
-    font-weight: 500;
+    margin-bottom: 15px;
 }
 
-/* ---------- প্যারা ও লিস্ট ---------- */
 p, li {
-    color: #444;
-    line-height: 1.7;
-    font-size: 15px;
+    color: #333;
+    line-height: 1.6;
 }
 
 ul {
@@ -72,154 +50,27 @@ ul li::before {
     color: #4a90e2;
 }
 
-/* ---------- লিংক ডিজাইন ---------- */
-a {
-    color: #4a90e2;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
+/* Gallery Style */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
 }
 
-a:hover {
-    color: #1f65b5;
-    text-decoration: underline;
+.gallery img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
-/* ---------- ফুটার ---------- */
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
 footer {
-    margin-top: 40px;
+    margin-top: 30px;
     color: #777;
     font-size: 14px;
-}
-
-/* ---------- মোবাইলের জন্য ---------- */
-@media (max-width: 600px) {
-    .container {
-        padding: 25px;
-        margin: 20px;
-    }
-
-    .profile-img {
-        width: 120px;
-        height: 120px;
-    }
-
-    h1 {
-        font-size: 24px;
-    }/* ====== Products / Cards styling ====== */
-.products-section {
-  margin-top: 30px;
-  text-align: left;
-}
-
-.products-section h3 {
-  text-align: center;
-  color: #222;
-  margin-bottom: 18px;
-}
-
-/* grid of cards */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  margin-top: 10px;
-}
-
-/* single card */
-.card {
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  display: flex;
-  flex-direction: column;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-}
-
-.card img {
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
-  display: block;
-}
-
-/* card content */
-.card-body {
-  padding: 12px 14px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.card-body h4 {
-  margin: 0 0 6px 0;
-  font-size: 16px;
-  color: #1a1a1a;
-}
-
-.card-body p {
-  margin: 0 0 8px 0;
-  color: #444;
-  font-size: 14px;
-  line-height: 1.45;
-}
-
-/* price badge */
-.price {
-  color: #4a90e2;
-  font-weight: 600;
-  margin-top: auto;
-}
-
-/* actions */
-.card-actions {
-  margin-top: 10px;
-  display: flex;
-  gap: 8px;
-}
-
-/* buttons */
-.btn {
-  display: inline-block;
-  padding: 8px 12px;
-  border-radius: 8px;
-  background: #4a90e2;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 14px;
-  transition: background 0.25s ease, transform 0.15s ease;
-}
-.btn:hover { background: #1f65b5; transform: translateY(-2px); }
-
-.btn.ghost {
-  background: transparent;
-  color: #4a90e2;
-  border: 1px solid #4a90e2;
-}
-.btn.ghost:hover { background: #eaf3ff; }
-
-/* responsive: make grid 1 column on small screens */
-@media (max-width: 800px) {
-  .cards { grid-template-columns: repeat(2, 1fr); }
-  .card img { height: 130px; }
-}
-@media (max-width: 480px) {
-  .cards { grid-template-columns: 1fr; }
-  .card img { height: 180px; }
-}
-
-    h2 {
-        font-size: 16px;
-    }
-
-    p {
-        font-size: 14px;
-    }
 }
