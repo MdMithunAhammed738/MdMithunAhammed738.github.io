@@ -8,34 +8,68 @@
 </head>
 <body>
     <div class="container">
+
+        <!-- প্রোফাইল ছবি -->
         <img src="profile.jpg" alt="My Photo" class="profile-img">
 
+        <!-- নাম ও ট্যাগলাইন -->
         <h1>Md Mithun Ahammed</h1>
         <h2>Web Developer | Graphic Designer | Student</h2>
+        <p class="tagline">আমি প্রতিদিন কিছু না কিছু নতুন শেখার চেষ্টা করি — কোডিং আমার প্যাশন 💻</p>
 
+        <!-- আমার সম্পর্কে -->
+        <h3>💡 আমার সম্পর্কে</h3>
         <p>
-            Assalamu Alaikum! I am Mithun Ahammed. I am learning web design and development.
-            This website is my personal profile where I share my skills, goals, and contact information.
+            আসসালামু আলাইকুম! আমি মিঠুন আহাম্মেদ — প্রযুক্তি ও ডিজাইনের প্রতি আগ্রহী একজন শিক্ষার্থী।
+            আমি বর্তমানে ওয়েব ডিজাইন ও ডেভেলপমেন্ট শিখছি এবং ছোট ছোট প্রজেক্টে কাজ করে অভিজ্ঞতা অর্জন করছি।
+            আমার লক্ষ্য হলো একজন দক্ষ ফুল-স্ট্যাক ডেভেলপার হওয়া ইনশাআল্লাহ 🌱
         </p>
 
-        <h3>🎯 My Skills</h3>
-        <ul>
-            <li>HTML, CSS, JavaScript</li>
-            <li>Canva & Photoshop Design</li>
-            <li>Writing and Online Project Management</li>
-        </ul>
+        <!-- দক্ষতা -->
+        <h3>🎯 আমার দক্ষতা</h3>
+        <div class="skill">
+            <p>HTML</p>
+            <div class="bar"><div class="fill" style="width:90%"></div></div>
+        </div>
+        <div class="skill">
+            <p>CSS</p>
+            <div class="bar"><div class="fill" style="width:80%"></div></div>
+        </div>
+        <div class="skill">
+            <p>JavaScript</p>
+            <div class="bar"><div class="fill" style="width:60%"></div></div>
+        </div>
+        <div class="skill">
+            <p>Graphic Design (Canva / Photoshop)</p>
+            <div class="bar"><div class="fill" style="width:85%"></div></div>
+        </div>
 
-        <h3>📞 Contact</h3>
+        <!-- পোর্টফোলিও -->
+        <h3>📁 আমার কাজ</h3>
+        <div class="gallery">
+            <img src="work1.jpg" alt="Project 1">
+            <img src="work2.jpg" alt="Project 2">
+            <img src="work3.jpg" alt="Project 3">
+        </div>
+
+        <!-- যোগাযোগ -->
+        <h3>📞 যোগাযোগ</h3>
         <p>
-            📱 Phone: +9660559352478 <br>
-            ✉️ Email: <a href="mailto:mithun811997@gmail.com">mithun811997@gmail.com</a><br>
-            🌐 Facebook: <a href="https://www.facebook.com/share/16og7Zorfh/" target="_blank">Visit Profile</a><br>
-            📍 Location: Saudi Arabia
+            ✉️ <a href="mailto:mithun811997@gmail.com">mithun811997@gmail.com</a><br>
+            🌐 <a href="https://www.facebook.com/share/16og7Zorfh/" target="_blank">Facebook Profile</a><br>
+            📍 অবস্থান: সৌদি আরব<br>
+            📱 মোবাইল: +9660559352478
         </p>
 
+        <!-- ফুটার -->
         <footer>
-            <p>© Md Mithun Ahammed | All Rights Reserved.</p>
+            <p>© <span id="year"></span> Md Mithun Ahammed | All Rights Reserved.</p>
         </footer>
     </div>
+
+    <!-- জাভাস্ক্রিপ্ট -->
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
