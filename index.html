@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="bn">
-<head><meta name="description" content="Md Mithun Ahammed | Web Developer, Designer & Student. আমার ব্যক্তিগত ওয়েবসাইট যেখানে আমার দক্ষতা ও কাজের বিবরণ আছে।">
-<meta name="keywords" content="Md Mithun Ahammed, Mithun Ahmed, Web Developer, Portfolio, HTML, CSS, Designer">
-<meta name="author" content="Md Mithun Ahammed">
+<head>
+    <meta name="description" content="Md Mithun Ahammed | Web Developer, Designer & Student. আমার ব্যক্তিগত ওয়েবসাইট যেখানে আমার দক্ষতা ও কাজের বিবরণ আছে।">
+    <meta name="keywords" content="Md Mithun Ahammed, Mithun Ahmed, Web Developer, Portfolio, HTML, CSS, Designer">
+    <meta name="author" content="Md Mithun Ahammed">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Md Mithun Ahammed - Personal Profile</title>
@@ -36,7 +37,8 @@
             <li>Writing & Online Project Management</li>
         </ul>
 
-        <h3>📞 যোগাযোগ</h3>0559352478
+        <h3>📞 যোগাযোগ</h3>
+        <p>📱 Mobile: <a href="tel:+9660559352478">+966 055 935 2478</a></p>
         <p>✉️ Email: <a href="mailto:mithun811997@gmail.com">mithun811997@gmail.com</a></p>
         <p>🌐 Facebook: <a href="https://www.facebook.com/share/16og7Zorfh/" target="_blank">আমার ফেসবুক প্রোফাইল</a></p>
         <p>📍 Location: Saudi Arabia</p>
@@ -50,10 +52,33 @@
             <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Project 3">
         </div>
 
+        <hr>
+
+        <!-- ✅ WhatsApp Contact Form -->
+        <h3>💬 WhatsApp এ যোগাযোগ করুন</h3>
+        <form onsubmit="sendWhatsAppMessage(event)">
+            <input type="text" id="name" placeholder="আপনার নাম লিখুন" required><br><br>
+            <textarea id="message" placeholder="আপনার বার্তা লিখুন" required></textarea><br><br>
+            <button type="submit">📩 মেসেজ পাঠান</button>
+        </form>
+
         <footer>
             <p>© 2025 Md Mithun Ahammed | All Rights Reserved.</p>
         </footer>
     </div>
+
+    <!-- ✅ WhatsApp Script -->
+    <script>
+        function sendWhatsAppMessage(event) {
+            event.preventDefault();
+            const name = document.getElementById("name").value;
+            const message = document.getElementById("message").value;
+            const phoneNumber = "966559352478"; // ← তোমার WhatsApp নাম্বার
+            const text = `হ্যালো, আমি ${name}! %0A${message}`;
+            const url = `https://wa.me/${phoneNumber}?text=${text}`;
+            window.open(url, "_blank");
+        }
+    </script>
 
 </body>
 </html>
